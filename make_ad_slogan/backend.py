@@ -1,11 +1,11 @@
 # fastapi api 서버
 # openai api를 활용해서 만든 광고 문구 작성 함수를 호출
 from fastapi import FastAPI
+from make_ad_slogan.config import API_KEY
 from pydantic import BaseModel
 import openai
 
-openai.api_key = "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"
-
+openai.api_key = API_KEY
 
 class SloganGenerator:
     def __init__(self, engine='gpt-3.5-turbo'):
